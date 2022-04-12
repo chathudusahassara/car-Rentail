@@ -27,7 +27,8 @@
 <!---	 return date<input type="text" name="rdate"><br> --->	
 	    Return date : <input type="date" id="rDate" name="rdate"><br>
 		
-		<input type="submit" name="submit" value="Create Customer">
+		<input type="submit" name="submit" value="Next">
+		<input type="reset" value="Reset">
 			
 	</form>
 
