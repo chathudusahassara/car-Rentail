@@ -13,7 +13,8 @@
 		Customer name <input type = "text" name = "cname"> <br>
 		Customer nic <input type = "text" name = "cnic"> <br>
 		Customer Address <input type = "text" name = "caddress"> <br>
-		Customer id <input type = "text" name = "cid"> <br>
+		Customer id <input type = "text" name = "cid">  
+				<a href="https://files.fm/"><button type="button">upload photo</button> </a><br>
 		
 		<input type = "submit" name = "submit" value ="next">
 		<input type="reset" value="Reset">
