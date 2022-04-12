@@ -28,5 +28,15 @@
 	<servlet-name>customer</servlet-name>
 	<url-pattern>/insert</url-pattern>
 </servlet-mapping>
+
+
+<servlet>
+	<servlet-name>cusDetails</servlet-name>
+	<servlet-class>com.paymentcus.cusdetails</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>cusDetails</servlet-name>
+	<url-pattern>/insertcus</url-pattern>
+</servlet-mapping>
          
 </web-app>

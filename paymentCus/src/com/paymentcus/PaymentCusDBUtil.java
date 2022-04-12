@@ -79,6 +79,40 @@ public class PaymentCusDBUtil {
 		return isSuccess;
 	}
 	
+	//insert customer details
+	
+	public static boolean insertcusDetails(String cname,String cnic, String caddress,String cid) {
+		
+		boolean isSuccess = false;
+		
+		//create db connection
+		String url = "jdbc:mysql://localhost:3306/paymentcustomer";
+		String user = "root";
+		String pass = "sliit";
+		
+		try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			Connection con = DriverManager.getConnection(url,user,pass);
+			Statement stmt  = con.createStatement();
+			String sql  = "insert into customer values (0,'"+cname+"','"+cnic+"','"+caddress+"','"+cid+"')";
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs >0) {
+				isSuccess = true;
+			}else {
+				isSuccess = false;
+			}
+						
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return isSuccess;
+	}
+	
 	
 	
 	
