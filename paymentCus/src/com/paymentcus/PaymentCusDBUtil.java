@@ -113,6 +113,41 @@ public class PaymentCusDBUtil {
 		return isSuccess;
 	}
 	
+	// insert card details
+	
+	public static boolean cusPayment(String cardname,String cardnum, String carddate,String cvv) {
+		
+		boolean isSuccess = false;
+		
+		//create db connection
+		String url = "jdbc:mysql://localhost:3306/paymentcustomer";
+		String user = "root";
+		String pass = "sliit";
+		
+		try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			Connection con = DriverManager.getConnection(url,user,pass);
+			Statement stmt  = con.createStatement();
+			String sql  = "insert into carddetails values (0,'"+cardname+"','"+cardnum+"','"+carddate+"','"+cvv+"')";
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs >0) {
+				isSuccess = true;
+			}else {
+				isSuccess = false;
+			}
+						
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return isSuccess;
+	}
+
+	
 	
 	
 	

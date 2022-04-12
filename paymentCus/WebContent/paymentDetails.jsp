@@ -8,6 +8,20 @@
 </head>
 <body>
 <h1>payment details</h1>
+	
+	<form action = "insertcard" method = "post">
+	
+		Card Holder name <input type = "text" name = "cardname"> <br>
+		Card number <input type = "text" name = "cardnum"> <br>
+		expire Date <input type = "text" name = "carddate"> <br>
+		CVV <input type = "text" name = "cvv"> <br>
+		<br>
+		<a href="paymentcomplete.jsp"><input type="button" value="Cash payment"> </a> <br> <br>
+		<input type="submit" name="submit" value="Next">
+		<input type="reset" value="Reset">
+	 
+	 	
+	</form>
 
 </body>
 </html>
