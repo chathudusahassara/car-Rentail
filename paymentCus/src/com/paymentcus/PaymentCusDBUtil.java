@@ -20,7 +20,6 @@ public class PaymentCusDBUtil {
 		
 		
 		//validate
-		
 		try {
 			
 			Class.forName("com.mysql.jdbc.Driver");
@@ -44,7 +43,44 @@ public class PaymentCusDBUtil {
 			e.printStackTrace();	
 		}
 				
-		return cus;
-		
+		return cus;		
 	}
+	
+	//insert booking information
+	
+	public static boolean insertcustomer(String car,String duration,String adate, String rdate) {
+		
+		boolean isSuccess = false;
+		
+		//create db connection
+		String url = "jdbc:mysql://localhost:3306/paymentcustomer";
+		String user = "root";
+		String pass = "sliit";
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			Connection con = DriverManager.getConnection(url,user,pass);
+			Statement stmt  = con.createStatement();
+			String sql = "insert into booking values (0,'"+car+"','"+duration+"','"+adate+"','"+rdate+"')";
+			int rs = stmt.executeUpdate(sql);    //return two value 1 --> succuss 0--> unsuccess
+			
+			if(rs >0) {
+				isSuccess = true;
+			}else {
+				isSuccess = false;
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return isSuccess;
+	}
+	
+	
+	
+	
+	
 }
