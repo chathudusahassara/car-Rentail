@@ -1,6 +1,7 @@
 package com.paymentcus;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,12 +29,22 @@ public class UpdateCustomerServlet extends HttpServlet {
 		isTrue = PaymentCusDBUtil.updatebooking(bid, car, duration, adate, rdate);
 		
 		if(isTrue == true) {
-			RequestDispatcher dis = request.getRequestDispatcher("paymentcomplete.jsp");
+			
+			List<Booking> bookDetails = PaymentCusDBUtil.getBookingDetails(bid);
+			request.setAttribute("bookDetails", bookDetails);
+			
+			RequestDispatcher dis = request.getRequestDispatcher("bookingDetails.jsp");
 			dis.forward(request, response);
 		}
 		else {
-			RequestDispatcher dis2 = request.getRequestDispatcher("unsuccess.jsp");
-			dis2.forward(request, response);
+	//		RequestDispatcher dis2 = request.getRequestDispatcher("unsuccess.jsp");
+	//		dis2.forward(request, response);
+			
+			List<Booking> bookDetails = PaymentCusDBUtil.getBookingDetails(bid);
+			request.setAttribute("bookDetails", bookDetails);
+			
+			RequestDispatcher dis = request.getRequestDispatcher("bookingDetails.jsp");
+			dis.forward(request, response);
 			
 		}
 		

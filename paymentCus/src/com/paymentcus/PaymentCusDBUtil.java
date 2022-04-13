@@ -229,7 +229,42 @@ public class PaymentCusDBUtil {
 		return isSuccess;
 	}
 
-
+//retrive
+	
+	public static List<Booking> getBookingDetails(String id){
+		
+		int concertedID = Integer.parseInt(id);
+		
+		
+		ArrayList<Booking> book = new ArrayList<>();
+		
+		try {
+			
+			con  = DBConnect.getConnection();
+			stmt = con.createStatement();
+			String sql = "select * from booking where id = '"+concertedID+"'";
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				int bid = rs.getInt(1);
+				String carModel = rs.getString(2);
+				String duration = rs.getString(3);
+				String adate = rs.getString(4);
+				String rdate = rs.getString(5);
+				
+				Booking b = new Booking(bid,carModel,duration,adate,rdate);
+				book.add(b);
+				
+			}
+			
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return book;
+	}
 	
 	
 	
