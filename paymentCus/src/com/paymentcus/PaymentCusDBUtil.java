@@ -196,6 +196,38 @@ public class PaymentCusDBUtil {
 		
 		return book;
 	}
+	
+	//update booking details
+	
+	public static boolean updatebooking(String id,String car,String duration,String adate,String rdate) {
+		
+		boolean isSuccess = false;
+		try {
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
+			String sql = "update booking set carModel='"+car+"',duration='"+duration+"',acceptanceDate='"+adate+"',returnDate='"+rdate+"'"+"where id='"+id+"'";
+			
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs >0) {
+				isSuccess = true;
+			}
+			else {
+				isSuccess = false;
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			
+		}
+		
+		
+		
+		
+		
+		
+		return isSuccess;
+	}
 
 
 	

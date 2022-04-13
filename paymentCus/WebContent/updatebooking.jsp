@@ -16,7 +16,7 @@
 		String rdate = request.getParameter("rdate");
 	%>
 
-	<form action = "#" method ="post">
+	<form action = "updatebookig" method ="post">
 		Booking ID <input type = "text" name = "bid" value ="<%= id %>" readonly><br>
 		car<input type = "text" name = "car" value="<%= model %>"><br>
 		duration<input type = "text" name = "duration" value="<%= duration %>"><br>

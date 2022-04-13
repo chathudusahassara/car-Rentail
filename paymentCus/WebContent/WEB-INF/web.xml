@@ -60,5 +60,16 @@
 </servlet-mapping>
 
 
+
+<servlet>
+	<servlet-name>updatebookig</servlet-name>
+	<servlet-class>com.paymentcus.UpdateCustomerServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>updatebookig</servlet-name>
+	<url-pattern>/updatebookig</url-pattern>
+</servlet-mapping>
+
+
          
 </web-app>
