@@ -27,7 +27,7 @@ public class cusPayment extends HttpServlet {
 		isTrue = PaymentCusDBUtil.cusPayment(cardname, cardnum, carddate, cvv);
 	
 		if(isTrue == true) {
-			RequestDispatcher dis =  request.getRequestDispatcher("bookingDetails.jsp");
+			RequestDispatcher dis =  request.getRequestDispatcher("paymentcomplete.jsp");
 			dis.forward(request, response);
 		}else {
 			RequestDispatcher dis2 =  request.getRequestDispatcher("unsuccess.jsp");
