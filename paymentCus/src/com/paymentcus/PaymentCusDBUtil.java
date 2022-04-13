@@ -8,26 +8,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PaymentCusDBUtil {
+	
+	
+	private static Connection con = null;
+	private static Statement stmt = null;
+	private static ResultSet rs = null;
 
 	public static List<Customer> validate(String userName,String password){
 		
 		ArrayList<Customer> cus = new ArrayList<>();
 		
 		//create database connection
-		String url = "jdbc:mysql://localhost:3306/paymentcustomer";
-		String user = "root";
-		String pass = "sliit";
+//		String url = "jdbc:mysql://localhost:3306/paymentcustomer";
+//		String user = "root";
+//		String pass = "sliit";
 		
 		
 		//validate
 		try {
 			
-			Class.forName("com.mysql.jdbc.Driver");
+//			Class.forName("com.mysql.jdbc.Driver");
 			
-			Connection con = DriverManager.getConnection(url,user,pass);
-			Statement stmt  = con.createStatement();			
+//			Connection con = DriverManager.getConnection(url,user,pass);
+//			Statement stmt  = con.createStatement();			
+			
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
 			String sql = "select * from management where username='"+userName+"' and password='"+password+"' ";
-			ResultSet rs = stmt.executeQuery(sql);
+//			ResultSet rs = stmt.executeQuery(sql);
+			rs = stmt.executeQuery(sql);
 			
 			if(rs.next()) {
 				int id = rs.getInt(1);
@@ -146,7 +155,50 @@ public class PaymentCusDBUtil {
 		
 		return isSuccess;
 	}
+	
+//search
+	
+	public static List<Booking> validateC(String userId){
+		
+		ArrayList<Booking> book = new ArrayList<>();
+		//create connection
+		String url = "jdbc:mysql://localhost:3306/paymentcustomer";
+		String user = "root";
+		String pass = "sliit";
+		
+		//validate
+		try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			Connection con = DriverManager.getConnection(url,user,pass);
+			Statement stmt  = con.createStatement();			
+			String sql = "select * from booking where id='"+userId+"'";			
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			if(rs.next()) {
+				int id = rs.getInt(1);
+				String carModel = rs.getString(2);
+				String duration = rs.getString(3);
+				String acceptanceDate = rs.getString(4);
+				String returnDate = rs.getString(5);
+				
+				Booking b = new Booking(id,carModel,duration,acceptanceDate,returnDate);
+				book.add(b);
+				
+				
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return book;
+	}
 
+
+	
 	
 	
 	

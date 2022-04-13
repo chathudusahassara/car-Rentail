@@ -49,5 +49,16 @@
 	<servlet-name>cusPayment</servlet-name>
 	<url-pattern>/insertcard</url-pattern>
 </servlet-mapping>
+
+<servlet>
+	<servlet-name>search</servlet-name>
+	<servlet-class>com.paymentcus.SearchServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>search</servlet-name>
+	<url-pattern>/search</url-pattern>
+</servlet-mapping>
+
+
          
 </web-app>

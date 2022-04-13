@@ -19,9 +19,23 @@
 		<a href="paymentcomplete.jsp"><input type="button" value="Cash payment"> </a> <br> <br>
 		<input type="submit" name="submit" value="Next">
 		<input type="reset" value="Reset">
+		
+	</form>
+	
+	<form action="search" method="post">
+		
+		<h1>view booking details again</h1>
+		
+		id <input type = "text" name="uid"><br>
+		
+		<input type = "submit" name = "submit" value="search">
+		
+		
+	</form>	
+		
 	 
 	 	
-	</form>
+	
 
 </body>
 </html>
