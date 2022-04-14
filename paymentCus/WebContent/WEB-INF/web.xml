@@ -71,5 +71,17 @@
 </servlet-mapping>
 
 
+
+
+<servlet>
+	<servlet-name>deletebookig</servlet-name>
+	<servlet-class>com.paymentcus.DeleteBookingServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>deletebookig</servlet-name>
+	<url-pattern>/deletebookig</url-pattern>
+</servlet-mapping>
+
+
          
 </web-app>

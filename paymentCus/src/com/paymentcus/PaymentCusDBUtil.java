@@ -266,6 +266,38 @@ public class PaymentCusDBUtil {
 		return book;
 	}
 	
+//delete
+	public static boolean deleteBook(String id) {
+		boolean isSuccess = false;
+		
+		//int convId = Integer.parseInt(id);
+		
+		int concertedID = Integer.parseInt(id);
+		
+		try {
+			
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
+			String sql ="delete from booking where id='"+concertedID+"'";
+			int r = stmt.executeUpdate(sql);
+			
+			if(r > 0) {
+				isSuccess = true;
+			}
+			else {
+				isSuccess = false;
+			}
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			
+		}
+		
+		
+		return isSuccess;
+		
+	}
 	
 	
 	

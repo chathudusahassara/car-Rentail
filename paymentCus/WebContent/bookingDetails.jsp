@@ -64,5 +64,17 @@
 	<input type = "button" name="update" value ="update booking details">
 	</a>
 	
+	<c:url value="deletecustomer.jsp" var="bookdelete">
+		<c:param name="id" value = "${id}"/>
+		<c:param name="model" value = "${model}"/>
+		<c:param name="duration" value = "${duration}"/>
+		<c:param name="adate" value = "${adate}"/>
+		<c:param name="rdate" value = "${rdate}"/>
+
+	</c:url>
+	<a href ="${bookdelete}">
+	<input type ="button" name="delete" value = "Delete My Account">
+	</a>
+	
 </body>
 </html>
