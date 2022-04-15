@@ -91,7 +91,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                         <td>
-                        <div class="p-t-30">
+                        <div class="p-t-30"> 
                             <button class="btn btn--radius btn--red" type="reset" value="Reset">Reset</button>
                         </div>
                         </td>
