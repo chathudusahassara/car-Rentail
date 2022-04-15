@@ -34,6 +34,11 @@
 
 
 <!-- stop form links -->
+
+<!-- for validation start -->
+
+
+<!-- for validation end -->
 </head>
 <body>
 
@@ -52,20 +57,20 @@
                     <form action = "insertcard" method = "post">
                     
                         <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="Card Holder name" name="cardname">
+                            <input class="input--style-2" type="text" placeholder="Card Holder name" name="cardname" required>
                         </div>
                         
                         <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="Card Number" name="cardnum">
+                            <input class="input--style-2" type="text" placeholder="Card Number" name="cardnum" required>
                         </div>
                         
                         <div class="row row-space">
                         <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="expire Date" name="carddate">
+                            <input class="input--style-2" type="text" placeholder="expire Date" name="carddate" required>
                         </div>
                         
                         <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="CVV" name="cvv">
+                            <input class="input--style-2" type="text" placeholder="CVV" name="cvv" required>
                         </div>
                         </div>
                     	
@@ -101,7 +106,7 @@
                     	
                     	<br>
                     	<div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="Enter Booking ID" name="uid">
+                            <input class="input--style-2" type="text" placeholder="Enter Booking ID" name="uid" required>
                         </div>
                        
                         <div class="p-t-30">

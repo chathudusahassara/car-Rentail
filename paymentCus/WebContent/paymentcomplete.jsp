@@ -5,9 +5,21 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+
+ <style>
+body {
+  background-image: url('images/psuc.png');
+    background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+</style>
 </head>
 <body>
-<h1>paymentcomplete.jsp</h1>
 
+
+
+</style>
 </body>
 </html>
