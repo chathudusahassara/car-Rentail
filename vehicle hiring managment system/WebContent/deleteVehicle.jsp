@@ -65,7 +65,7 @@
 	
 	<input type="submit" name="submit" value="Delete My Data">
 	
-	</form>
+	</form>  
 
 </body>
 </html>
