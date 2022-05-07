@@ -52,9 +52,9 @@
       eMileage = document.getElementById("end").value;
       mCost = document.getElementById("mCost").value;
       document.getElementById("tDCost").innerHTML = noDays * dayCost;
-      document.getElementById("tMileage").innerHTML =  sMileage - eMileage;
-      document.getElementById("tMCost").innerHTML = (sMileage - eMileage) * mCost;
-      document.getElementById("tCost").innerHTML = ((sMileage - eMileage) * mCost) + (noDays * dayCost);
+      document.getElementById("tMileage").innerHTML =  eMileage - sMileage;
+      document.getElementById("tMCost").innerHTML = (eMileage - sMileage) * mCost;
+      document.getElementById("tCost").innerHTML = ((eMileage - sMileage) * mCost) + (noDays * dayCost);
       
       
     }
