@@ -29,7 +29,7 @@ public class cusdetails extends HttpServlet {
 		isTrue = PaymentCusDBUtil.insertcusDetails(name, nic, address, id);
 		
 		if(isTrue == true) {
-			RequestDispatcher dis =  request.getRequestDispatcher("paymentDetails.jsp");
+			RequestDispatcher dis =  request.getRequestDispatcher("calc.jsp");
 			dis.forward(request, response);
 		}else {
 			RequestDispatcher dis2 = request.getRequestDispatcher("unsuccess.jsp");
