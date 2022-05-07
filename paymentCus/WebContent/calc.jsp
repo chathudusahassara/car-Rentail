@@ -16,7 +16,6 @@
 <body>
 
   <!-- start test calc -->
-  
    
    <form>
   	no of days : <input type = "text" id = "noOfDays"/> <br>  	
