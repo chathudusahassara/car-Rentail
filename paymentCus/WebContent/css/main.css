@@ -161,10 +161,8 @@ h6 {
   background: #2c6ed5;
 }
 
-.bg-red {
-  height: 200px;
-  background-color: #cccccc;
-  background-image: linear-gradient(rgb(123, 248, 127), rgb(248, 248, 247));
+.bg-red {  
+  background: #C0C0C0;  
 }
 
 /* ==========================================================================

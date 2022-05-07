@@ -186,7 +186,7 @@ public class PaymentCusDBUtil {
 				Booking b = new Booking(id,carModel,duration,acceptanceDate,returnDate);
 				book.add(b);
 				
-				
+		
 			}
 			
 		}catch (Exception e) {

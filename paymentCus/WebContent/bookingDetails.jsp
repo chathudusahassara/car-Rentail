@@ -7,6 +7,13 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
 <link rel="stylesheet" href="css_v/bootstrap.min.css">
 <style>
 table {
@@ -177,10 +184,12 @@ tr:nth-child(even) {
                   <button class="btn btn--radius btn--red" type ="button" name="delete">Delete My Account</button>
              </div>
              </a>
-             </center>
              
-	
-	
+             <div class="p-t-30">       
+				<button onclick="print()" class="btn btn-warning"" type="submit" name="submit" value="Submit"><b>Download PDF</b></button>
+				</div>
+             </center>
+       
 	
 	
 </body>

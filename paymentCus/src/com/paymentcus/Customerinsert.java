@@ -27,7 +27,7 @@ public class Customerinsert extends HttpServlet {
 		isTrue = PaymentCusDBUtil.insertcustomer(car, duration, adate, rdate);
 		
 		if(isTrue == true) {
-			RequestDispatcher dis = request.getRequestDispatcher("success.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("paymentDetails.jsp");
 			dis.forward(request, response);
 		}else {
 			RequestDispatcher dis2 = request.getRequestDispatcher("unsuccess.jsp");
